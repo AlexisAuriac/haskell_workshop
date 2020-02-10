@@ -25,4 +25,5 @@ You're probably going to want to test function by function to begin with as the 
 
 ### Notes
 Some prototypes have been simplified.\
-Error handling is not required.
+Error handling is not required.\
+You can create other functions if it helps you.
