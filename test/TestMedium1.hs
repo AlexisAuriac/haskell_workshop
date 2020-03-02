@@ -26,6 +26,12 @@ testMedium1 = describe "Medium1" $ do
             myDrop 11 [1..10] `shouldBe` []
             myDrop 100 [1..10] `shouldBe` []
 
+    describe "mySpan" $ do
+        it "Should seperate the longest prefix satisfying a predicate from the rest of the list" $ do
+            mySpan even [2,6,4,5,7,6,3] `shouldBe` ([2,6,4], [5,7,6,3])
+            mySpan odd [2,6,4,5,7,6,3] `shouldBe` ([], [2,6,4,5,7,6,3])
+            mySpan (<5) [1..10] `shouldBe` ([1..4], [5..10])
+
     describe "myTakeWhile" $ do
         it "Should return the longest prefix (possibly empty) of elements that satisfy a predicate" $ do
             myTakeWhile (<5) [1..10] `shouldBe` [1..4]
