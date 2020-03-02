@@ -18,13 +18,13 @@ testEasy = describe "Easy" $ do
 
     describe "myNotElem" $ do
         it "Should return True if the element is not in the list" $ do
-            myElem 0 [1..10] `shouldBe` False
-            myElem 'd' "abc" `shouldBe` False
+            myNotElem 0 [1..10] `shouldBe` False
+            myNotElem 'd' "abc" `shouldBe` False
 
         it "Should return False if the element is in the list" $ do
-            myElem 4 [1..10] `shouldBe` True
-            myElem 'a' "abc" `shouldBe` True
-            myElem 'c' "abc" `shouldBe` True
+            myNotElem 4 [1..10] `shouldBe` True
+            myNotElem 'a' "abc" `shouldBe` True
+            myNotElem 'c' "abc" `shouldBe` True
 
     describe "myConcat" $ do
         it "Should concatenate a list of lists" $ do
