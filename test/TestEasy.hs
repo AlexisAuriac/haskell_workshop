@@ -18,13 +18,13 @@ testEasy = describe "Easy" $ do
 
     describe "myNotElem" $ do
         it "Should return True if the element is not in the list" $ do
-            myNotElem 0 [1..10] `shouldBe` False
-            myNotElem 'd' "abc" `shouldBe` False
+            myNotElem 0 [1..10] `shouldBe` True
+            myNotElem 'd' "abc" `shouldBe` True
 
         it "Should return False if the element is in the list" $ do
-            myNotElem 4 [1..10] `shouldBe` True
-            myNotElem 'a' "abc" `shouldBe` True
-            myNotElem 'c' "abc" `shouldBe` True
+            myNotElem 4 [1..10] `shouldBe` False
+            myNotElem 'a' "abc" `shouldBe` False
+            myNotElem 'c' "abc" `shouldBe` False
 
     describe "myConcat" $ do
         it "Should concatenate a list of lists" $ do
@@ -33,7 +33,7 @@ testEasy = describe "Easy" $ do
             myConcat [[1,3..10], [4]] `shouldBe` [1,3,5,7,9,4]
 
     describe "myReverse" $ do
-        it "Should the order of the elements in the list" $ do
+        it "Should reverse the order of the elements in the list" $ do
             myReverse [1..10] `shouldBe` [10,9..1]
             myReverse [] `shouldBe` ([] :: [Int])
 
